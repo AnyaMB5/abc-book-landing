@@ -905,6 +905,26 @@
       }
     }
 
+    /* HubSpot confirmation message — covers all possible class names */
+    .waitlist-inner .submitted-message,
+    .waitlist-inner .hs-form .submitted-message,
+    .hubspot-form .submitted-message,
+    .hubspot-form > div {
+      position: relative;
+      z-index: 5;
+    }
+
+    .waitlist-inner .submitted-message,
+    .waitlist-inner .hs-form .submitted-message {
+      background: rgba(26, 76, 251, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: var(--space-6) var(--space-8);
+      border-radius: var(--radius-md);
+      color: var(--white);
+      font-size: 1.125rem;
+    }
+
     /* HubSpot form overrides */
     .waitlist-cta .hubspot-form {
       max-width: 480px;
