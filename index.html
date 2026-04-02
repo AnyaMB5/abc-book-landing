@@ -103,7 +103,7 @@
       box-sizing: border-box;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       font-family: var(--font-body);
@@ -564,8 +564,9 @@
     .trust-bar-logos {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: var(--space-6) var(--space-8);
     }
 
     .trust-bar-logos img {
@@ -573,6 +574,13 @@
       width: auto;
       opacity: 0.45;
       filter: grayscale(100%);
+    }
+
+    @media (min-width: 768px) {
+      .trust-bar-logos {
+        justify-content: space-between;
+        gap: var(--space-4);
+      }
     }
 
     /* ================================================================
@@ -1164,14 +1172,24 @@
       font-weight: 600;
     }
 
-    /* Trust bar logo height overrides */
-    .trust-logo-fujifilm  { height: 18px; }
-    .trust-logo-geodis     { height: 48px !important; }
-    .trust-logo-mlb        { height: 28px; }
-    .trust-logo-carrier    { height: 34px !important; }
-    .trust-logo-milton     { height: 28px; }
-    .trust-logo-sisc       { height: 34px !important; }
-    .trust-logo-tag        { height: 52px !important; }
+    /* Trust bar logo height overrides — mobile-first */
+    .trust-logo-fujifilm  { height: 14px; }
+    .trust-logo-geodis     { height: 28px !important; }
+    .trust-logo-mlb        { height: 18px; }
+    .trust-logo-carrier    { height: 22px !important; }
+    .trust-logo-milton     { height: 18px; }
+    .trust-logo-sisc       { height: 22px !important; }
+    .trust-logo-tag        { height: 32px !important; }
+
+    @media (min-width: 768px) {
+      .trust-logo-fujifilm  { height: 18px; }
+      .trust-logo-geodis     { height: 48px !important; }
+      .trust-logo-mlb        { height: 28px; }
+      .trust-logo-carrier    { height: 34px !important; }
+      .trust-logo-milton     { height: 28px; }
+      .trust-logo-sisc       { height: 34px !important; }
+      .trust-logo-tag        { height: 52px !important; }
+    }
 
     /* "Why We Wrote This Book" section */
     .why-book-section {
@@ -1212,7 +1230,7 @@
     }
     .why-made-image {
       display: block;
-      max-width: 360px;
+      max-width: min(360px, 100%);
       margin: var(--space-8) auto;
     }
   </style>
