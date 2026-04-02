@@ -170,16 +170,16 @@
     }
 
     .section {
-      padding: var(--space-20) 0;
+      padding: var(--space-12) 0;
     }
 
     .section-lg {
-      padding: var(--space-16) 0;
+      padding: var(--space-10) 0;
     }
 
     @media (min-width: 768px) {
-      .section { padding: var(--space-24) 0; }
-      .section-lg { padding: var(--space-20) 0; }
+      .section { padding: var(--space-16) 0; }
+      .section-lg { padding: var(--space-12) 0; }
     }
 
     .text-center { text-align: center; }
@@ -345,7 +345,7 @@
       background: linear-gradient(to bottom, var(--white), var(--cream));
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 960px) {
       .hero {
         padding-top: calc(72px + var(--space-24));
         padding-bottom: var(--space-24);
@@ -376,7 +376,7 @@
       z-index: 1;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 960px) {
       .hero-grid {
         grid-template-columns: 1.2fr 1fr;
         gap: var(--space-16);
@@ -413,7 +413,6 @@
 
     .hero-headline {
       color: var(--teal);
-      white-space: nowrap;
     }
 
     .hero-headline em {
@@ -748,7 +747,7 @@
       gap: var(--space-8);
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
       .testimonials-grid {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -825,7 +824,13 @@
       background: linear-gradient(135deg, #5B83F9 0%, #1A4CFB 100%);
       position: relative;
       overflow: hidden;
-      padding-bottom: 14rem;
+      padding-bottom: 10rem;
+    }
+
+    @media (min-width: 768px) {
+      .waitlist-cta {
+        padding-bottom: 14rem;
+      }
     }
 
     .waitlist-cta::before {
@@ -1024,15 +1029,16 @@
 
     .footer-links a {
       font-size: 0.875rem;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.8);
       transition: color var(--duration) ease;
+      padding: var(--space-2) var(--space-3);
     }
 
     .footer-links a:hover { color: var(--white); }
 
     .footer-copy {
       font-size: 0.8125rem;
-      color: rgba(255,255,255,0.4);
+      color: rgba(255,255,255,0.65);
     }
 
     /* ================================================================
@@ -1165,7 +1171,7 @@
     .trust-logo-carrier    { height: 34px !important; }
     .trust-logo-milton     { height: 28px; }
     .trust-logo-sisc       { height: 34px !important; }
-    .trust-logo-tag        { height: 96px !important; }
+    .trust-logo-tag        { height: 36px !important; }
 
     /* "Why We Wrote This Book" section */
     .why-book-section {
