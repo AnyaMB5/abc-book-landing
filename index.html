@@ -1175,6 +1175,12 @@
       font-weight: 600;
     }
 
+    /* Hide select logos on mobile for a single clean row */
+    .trust-hide-mobile { display: none; }
+    @media (min-width: 768px) {
+      .trust-hide-mobile { display: block; }
+    }
+
     /* Trust bar logo height overrides — mobile-first */
     .trust-logo-fujifilm  { height: 14px; }
     .trust-logo-geodis     { height: 28px !important; }
@@ -1298,13 +1304,13 @@
       <div class="trust-bar-label">Trusted by hundreds of benefits teams</div>
       <div class="trust-bar-logos">
         <img src="logos/Fujifilm.svg" alt="Fujifilm" class="trust-logo-fujifilm">
-        <img src="logos/Geodis.svg" alt="GEODIS" class="trust-logo-geodis">
+        <img src="logos/Geodis.svg" alt="GEODIS" class="trust-logo-geodis trust-hide-mobile">
         <img src="logos/MLB.svg" alt="MLB" class="trust-logo-mlb">
         <img src="logos/Otis.svg" alt="Otis">
         <img src="logos/Carrier.svg" alt="Carrier" class="trust-logo-carrier">
-        <img src="logos/Milton.svg" alt="Milton" class="trust-logo-milton">
-        <img src="logos/SISC.svg" alt="SISC" class="trust-logo-sisc">
-        <img src="logos/TAG.svg" alt="TAG" class="trust-logo-tag">
+        <img src="logos/Milton.svg" alt="Milton" class="trust-logo-milton trust-hide-mobile">
+        <img src="logos/SISC.svg" alt="SISC" class="trust-logo-sisc trust-hide-mobile">
+        <img src="logos/TAG.svg" alt="TAG" class="trust-logo-tag trust-hide-mobile">
       </div>
     </div>
   </section>
